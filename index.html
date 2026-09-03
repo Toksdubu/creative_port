@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative Video Editor & Visual Designer Portfolio. Expert in Adobe Premiere Pro, CapCut, Figma, Photoshop, and Illustrator.">
+  <title>Toksdubu Studio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="assets/logo.png" alt="TD Logo" class="nav-logo-img">
+        <span>Studio<span style="color: #ffffff;">.</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#tools" class="nav-link">Tools</a></li>
+        <li><a href="#works" class="nav-link">Sample Works</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#contact" class="nav-cta">Work Together</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Centered Animated Layout) -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <canvas id="hero-particles" class="hero-particles-canvas"></canvas>
+
+    <div class="container hero-centered-wrapper">
+
+      <h1 class="hero-condensed-title">
+        TD STUDIO
+      </h1>
+      
+      <div class="hero-sub-title">
+        Toksdubu Studio
+      </div>
+
+      <div class="hero-actions">
+        <a href="#works" class="btn-primary">
+          <span>Explore Works</span>
+          <i data-lucide="arrow-down-right"></i>
+        </a>
+        <a href="#about" class="btn-secondary">
+          <span>About Me</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Down Prompt -->
+    <a href="#about" class="hero-scroll-prompt" aria-label="Scroll to explore">
+      <span>SCROLL TO EXPLORE</span>
+      <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+    </a>
+  </section>
+
+  <!-- About Me Section (Monochromatic ADEL Card Layout with Pic 3 Photo) -->
+  <section class="about" id="about">
+    <div class="container">
+      
+      <div class="section-header" style="margin-bottom: 32px;">
+        <div class="mono-tag"><i data-lucide="user"></i> CREATIVE PROFILE</div>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <!-- Recreated ADEL Style Profile Card -->
+      <div class="adel-profile-card">
+        
+        <!-- Photo Side: Pic 3 Person in Barong Tagalog with Joyful Gesture -->
+        <div class="adel-photo-side">
+          <img src="assets/about_person.jpg" alt="Creative Editor Profile Photo" class="adel-user-photo">
+          <div class="adel-photo-overlay"></div>
+        </div>
+
+        <!-- Info Side: Customized ADEL Card Layout -->
+        <div class="adel-info-side">
+          
+          <!-- Top Header with Name & Cursive Signature -->
+          <div class="adel-header">
+            <div>
+              <div class="adel-meta-label">Primary Persona</div>
+              <div class="adel-big-name">ZACH</div>
+            </div>
+          </div>
+
+          <!-- Catchphrase / Motto -->
+          <div class="adel-catchphrase-box">
+            <div class="adel-meta-label">Creative Catchphrase</div>
+            <div class="adel-catchphrase-text">
+              "Bringing stories to life, one frame at a time."
+            </div>
+          </div>
+
+          <!-- Metadata Fields Grid -->
+          <div class="adel-meta-grid">
+            <div class="adel-meta-item">
+              <div class="adel-meta-label">Specialization</div>
+              <div class="adel-meta-value">Video Editor</div>
+            </div>
+
+            <div class="adel-meta-item">
+              <div class="adel-meta-label">Primary Suite</div>
+              <div class="adel-meta-value">Premiere & CapCut</div>
+            </div>
+
+            <div class="adel-meta-item">
+              <div class="adel-meta-label">Experience</div>
+              <div class="adel-meta-value">2 years</div>
+            </div>
+          </div>
+
+          <!-- Bottom Split: Specs vs About Bio -->
+          <div class="adel-bottom-split">
+            
+            <div class="adel-specs-column">
+              <div class="adel-meta-item">
+                <div class="adel-meta-label">Base Location</div>
+                <div class="adel-meta-value" style="font-size: 0.95rem;">Valenzuela, Philippines</div>
+              </div>
+
+              <div class="adel-meta-item">
+                <div class="adel-meta-label">Editing Vibe</div>
+                <div class="adel-meta-value" style="font-size: 0.95rem; color: #ffffff;">Creative, High Energy</div>
+              </div>
+
+              <div class="adel-meta-item">
+                <div class="adel-meta-label">Design Software</div>
+                <div class="adel-meta-value" style="font-size: 0.95rem;">Photoshop, Illustrator, Figma</div>
+              </div>
+            </div>
+
+            <div class="adel-bio-column">
+              <div class="adel-meta-label">About the Editor</div>
+              <p class="adel-bio-text">
+                Zach is a passionate video editor and graphic designer crafting engaging video edits for creators, commercial brands, and social audiences.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tools Section (Clean Aligned Brand Grid) -->
+  <section class="tools" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="mono-tag"><i data-lucide="cpu"></i> CREATIVE SUITE</div>
+        <h2 class="section-title">Tools</h2>
+      </div>
+
+      <div class="simple-tools-grid">
+        
+        <!-- Tool 1: Premiere Pro -->
+        <div class="simple-tool-card tool-pr">
+          <div class="tool-brand-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect width="44" height="44" rx="10" fill="#000038" stroke="#9999FF" stroke-width="2"/>
+              <text x="12" y="29" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="19" fill="#9999FF">Pr</text>
+            </svg>
+          </div>
+          <span class="simple-tool-name">Adobe Premiere Pro</span>
+        </div>
+
+        <!-- Tool 2: CapCut -->
+        <div class="simple-tool-card tool-cc">
+          <div class="tool-brand-icon">
+            <img src="assets/capcut_logo.png" alt="CapCut Logo" style="width: 36px; height: 36px; object-fit: contain;">
+          </div>
+          <span class="simple-tool-name">CapCut</span>
+        </div>
+
+        <!-- Tool 3: Figma -->
+        <div class="simple-tool-card tool-fg">
+          <div class="tool-brand-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect width="44" height="44" rx="10" fill="#111115" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <path d="M16 11C13.7909 11 12 12.7909 12 15C12 17.2091 13.7909 19 16 19H20V11H16Z" fill="#F24E1E"/>
+              <path d="M20 11H24C26.2091 11 28 12.7909 28 15C28 17.2091 26.2091 19 24 19H20V11Z" fill="#FF7262"/>
+              <path d="M28 23C28 20.7909 26.2091 19 24 19H20V27H24C26.2091 27 28 25.2091 28 23Z" fill="#1ABCFE"/>
+              <path d="M12 23C12 25.2091 13.7909 27 16 27H20V19H16C13.7909 19 12 20.7909 12 23Z" fill="#A259FF"/>
+              <path d="M12 31C12 33.2091 13.7909 35 16 35C18.2091 35 20 33.2091 20 31V27H16C13.7909 27 12 28.7909 12 31Z" fill="#0ACF83"/>
+            </svg>
+          </div>
+          <span class="simple-tool-name">Figma</span>
+        </div>
+
+        <!-- Tool 4: Photoshop -->
+        <div class="simple-tool-card tool-ps">
+          <div class="tool-brand-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect width="44" height="44" rx="10" fill="#001d34" stroke="#31a8ff" stroke-width="2"/>
+              <text x="11" y="29" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="19" fill="#31a8ff">Ps</text>
+            </svg>
+          </div>
+          <span class="simple-tool-name">Adobe Photoshop</span>
+        </div>
+
+        <!-- Tool 5: Illustrator -->
+        <div class="simple-tool-card tool-ai">
+          <div class="tool-brand-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect width="44" height="44" rx="10" fill="#330000" stroke="#ff9a00" stroke-width="2"/>
+              <text x="13" y="29" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="19" fill="#ff9a00">Ai</text>
+            </svg>
+          </div>
+          <span class="simple-tool-name">Adobe Illustrator</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Works Section -->
+  <section class="works" id="works">
+    <div class="container">
+      <div class="section-header">
+        <div class="mono-tag"><i data-lucide="film"></i> PORTFOLIO</div>
+        <h2 class="section-title">Featured Works</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="editing">Video Editing</button>
+        <button class="filter-btn" data-filter="reels">Short Form / Reels</button>
+        <button class="filter-btn" data-filter="design">Thumbnails & Design</button>
+      </div>
+
+      <!-- Works Grid -->
+      <div class="works-grid" id="works-grid">
+        
+        <!-- Work Card 1: St. Augustine Tour -->
+        <div class="work-card" 
+             data-category="editing" 
+             data-title="St. Augustine Tour Edit" 
+             data-video="assets/st_augustine_tour.mp4">
+          <div class="work-thumb">
+            <video src="assets/st_augustine_tour.mp4#t=1" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover;"></video>
+            <div class="work-overlay">
+              <div class="play-icon-circle"><i data-lucide="play"></i></div>
+            </div>
+          </div>
+          <div class="work-details">
+            <div class="work-cat">Video Editing</div>
+            <div class="work-title">St. Augustine Tour Edit</div>
+          </div>
+        </div>
+
+        <!-- Work Card 2: Pudgy Party 7 -->
+        <div class="work-card" 
+             data-category="reels" 
+             data-title="Pudgy Party 7" 
+             data-video="assets/pudgy_party_7.mp4">
+          <div class="work-thumb">
+            <video src="assets/pudgy_party_7.mp4#t=1" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover;"></video>
+            <div class="work-overlay">
+              <div class="play-icon-circle"><i data-lucide="play"></i></div>
+            </div>
+          </div>
+          <div class="work-details">
+            <div class="work-cat">Short Form / Reels</div>
+            <div class="work-title">Pudgy Party 7</div>
+          </div>
+        </div>
+
+        <!-- Work Card 3: Zoono Subbed Edit -->
+        <div class="work-card" 
+             data-category="reels" 
+             data-title="Zoono Subbed Edit" 
+             data-video="assets/zoono_subbed.mp4">
+          <div class="work-thumb">
+            <video src="assets/zoono_subbed.mp4#t=1" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover;"></video>
+            <div class="work-overlay">
+              <div class="play-icon-circle"><i data-lucide="play"></i></div>
+            </div>
+          </div>
+          <div class="work-details">
+            <div class="work-cat">Short Form / Reels</div>
+            <div class="work-title">Zoono Subbed Edit</div>
+          </div>
+        </div>
+
+        <!-- Work Card 4: Client Erikson Edit -->
+        <div class="work-card" 
+             data-category="editing" 
+             data-title="Client Erikson Edit" 
+             data-video="assets/client_erikson.mp4">
+          <div class="work-thumb">
+            <video src="assets/client_erikson.mp4#t=1" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover;"></video>
+            <div class="work-overlay">
+              <div class="play-icon-circle"><i data-lucide="play"></i></div>
+            </div>
+          </div>
+          <div class="work-details">
+            <div class="work-cat">Video Editing</div>
+            <div class="work-title">Client Erikson Edit</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section (Minimal Direct Links & Socials Layout) -->
+  <section class="contact" id="contact">
+    <div class="container contact-section-card">
+      
+      <!-- Left Side: Massive Title & Decorative Dot Grid Pattern -->
+      <div class="contact-left-side">
+        <h2 class="contact-huge-title">
+          Get in<br>touch.
+        </h2>
+
+        <!-- Decorative Dot Grid Pattern -->
+        <div class="dot-grid-pattern">
+          <svg width="220" height="110" viewBox="0 0 220 110" fill="none">
+            <pattern id="dotGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="1.5" fill="rgba(255, 255, 255, 0.25)"/>
+            </pattern>
+            <rect width="220" height="110" fill="url(#dotGrid)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Right Side: Clean Contact Items & Social Links -->
+      <div class="contact-right-side">
+        
+        <!-- Item 1: Phone / WhatsApp -->
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Phone / WhatsApp</div>
+            <a href="https://wa.me/639568315995" target="_blank" class="contact-item-detail link-hover">
+              09568315995
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 2: Mail -->
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Mail</div>
+            <a href="mailto:z.charlesnudalo6@gmail.com" class="contact-item-detail link-hover">
+              z.charlesnudalo6@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 3: Facebook -->
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Facebook</div>
+            <a href="https://www.facebook.com/tksdbu" target="_blank" class="contact-item-detail link-hover">
+              facebook.com/tksdbu
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 4: Instagram -->
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-title">Instagram</div>
+            <a href="https://www.instagram.com/ntzchphts" target="_blank" class="contact-item-detail link-hover">
+              @ntzchphts
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <!-- Brand & Copyright -->
+      <div class="footer-brand-group">
+        <a href="#hero" class="footer-logo">
+          <img src="assets/logo.png" alt="Toksdubu Studio Logo" class="footer-logo-img">
+          <span>Toksdubu Studio</span>
+        </a>
+        <div class="footer-copyright">
+          &copy; 2026 Toksdubu Studio. All rights reserved.
+        </div>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Back to Top Button -->
+      <a href="#hero" class="back-to-top-btn" aria-label="Back to Top">
+        <span>TOP</span>
+        <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+      </a>
+
+    </div>
+  </footer>
+
+  <!-- Project Lightbox Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <h3 class="modal-title" id="modal-project-title" style="font-size: 1.6rem; color: white;">Project Preview</h3>
+      
+      <div class="video-player-container" id="modal-video-frame">
+        <div style="text-align: center; padding: 20px;">
+          <i data-lucide="film" style="width: 48px; height: 48px; color: #ffffff; margin-bottom: 12px;"></i>
+          <p style="color: var(--text-muted);" id="modal-project-desc">Project details and sample cut preview.</p>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 16px;">
+        <div class="mono-tag" id="modal-project-tag">SOFTWARE USED: Premiere Pro, Photoshop</div>
+        <button class="btn-secondary" id="modal-done-btn" style="padding: 8px 16px; font-size: 0.85rem;">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle-2" style="color: #ffffff;"></i>
+    <span id="toast-message">Message sent successfully!</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
