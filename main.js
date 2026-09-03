@@ -259,22 +259,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDesc = document.getElementById('modal-project-desc');
   const videoFrame = document.getElementById('modal-video-frame');
 
+  function parseVideoEmbedUrl(url) {
+    if (!url) return '';
+    if (url.includes('youtube.com/embed/') || url.includes('player.vimeo.com/video/')) {
+      return url.includes('?') ? `${url}&autoplay=1` : `${url}?autoplay=1`;
+    }
+    // YouTube watch URL, shorts, or share link
+    const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
+    if (ytMatch && ytMatch[1]) {
+      return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0`;
+    }
+    // Vimeo URL
+    const vimeoMatch = url.match(/vimeo\.com\/(?:.*\/)?(\d+)/);
+    if (vimeoMatch && vimeoMatch[1]) {
+      return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
+    }
+    return url;
+  }
+
   function openModal(title, desc, videoSrc, embedSrc) {
     if (modalTitle) modalTitle.textContent = title;
     if (modalDesc) modalDesc.textContent = desc;
 
     if (videoFrame) {
-      if (videoSrc) {
-        // Local MP4 video player
-        videoFrame.innerHTML = `
-          <video src="${videoSrc}" controls autoplay style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; background: #000;">
-            Your browser does not support HTML5 video.
-          </video>
-        `;
-      } else if (embedSrc) {
+      const parsedEmbed = parseVideoEmbedUrl(embedSrc);
+
+      if (parsedEmbed) {
         // YouTube / Vimeo embed iframe
         videoFrame.innerHTML = `
-          <iframe src="${embedSrc}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
+          <iframe src="${parsedEmbed}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; width:100%; height:100%;"></iframe>
+        `;
+      } else if (videoSrc) {
+        // Local MP4 video player fallback
+        videoFrame.innerHTML = `
+          <video src="${videoSrc}" controls autoplay style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px; background: #000;">
+            Your browser does not support HTML5 video.
+          </video>
         `;
       } else {
         // Default placeholder fallback
