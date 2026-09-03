@@ -297,15 +297,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   workCards.forEach(card => {
-    // Hover video preview playback
+    // Instant live preview playback
     const thumbVideo = card.querySelector('.work-thumb video');
     if (thumbVideo) {
-      card.addEventListener('mouseenter', () => {
-        thumbVideo.play().catch(() => {});
-      });
-      card.addEventListener('mouseleave', () => {
-        thumbVideo.pause();
-      });
+      thumbVideo.muted = true;
+      thumbVideo.play().catch(() => {});
     }
 
     card.addEventListener('click', () => {
